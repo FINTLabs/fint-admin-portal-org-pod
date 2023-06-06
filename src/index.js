@@ -12,6 +12,6 @@ ReactDOM.render(
       <App/>
     </BrowserRouter>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('fint-admin-portal-org-pod')
 );
 //registerServiceWorker();
