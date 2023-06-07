@@ -4,7 +4,6 @@ import withStyles from '@mui/styles/withStyles';
 import AppMenu from "./appmenu/AppMenu";
 import {BrowserRouter} from "react-router-dom";
 
-
 const styles = theme => ({
     root: {
         width: '100%',
@@ -15,8 +14,6 @@ const styles = theme => ({
 });
 
 class Main extends React.Component {
-
-
     render() {
         const {classes} = this.props;
 
