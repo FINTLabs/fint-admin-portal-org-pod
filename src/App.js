@@ -36,7 +36,7 @@ class App extends Component {
                 <ThemeProvider theme={theme}>
                     <CookiesProvider>
                         <AppProvider>
-                            <HelloWorld/>
+                            <OrganisationContainer/>
                         </AppProvider>
                     </CookiesProvider>
                 </ThemeProvider>
