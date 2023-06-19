@@ -10,6 +10,7 @@ import OrganisationList from "./OrganisationList";
 import {bindActionCreators} from "redux";
 import {fetchContacts} from "../../data/redux/dispatchers/contact";
 import OrganisationNew from "./add/OrganisationNew";
+import Typography from "@mui/material/Typography";
 
 const styles = () => ({
   root: {}
@@ -64,7 +65,19 @@ class OrganisationContainer extends React.Component {
     if (this.props.organisations === undefined || this.props.contacts === undefined) {
       return <LoadingProgress/>;
     } else {
-      return this.renderPosts();
+      // return this.renderPosts();
+      const organisations = this.props.organisations && Array.isArray(this.props.organisations)
+          ? [...this.props.organisations].sort(Sort.alphabetically)
+          : [];
+      if(organisations.length > 0) {
+        return this.renderPosts();
+      } else {
+        return (
+            <div>
+              <Typography>No organizations available</Typography>
+            </div>
+        );
+      }
     }
   }
 
